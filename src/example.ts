@@ -1,3 +1,12 @@
+// const add = (a:number, b:number):void =>{
+// returns nothing
+// }
+
+// const add = (a:number, b:number):number =>{
+// console.log(a+b)
+// }
+// add(2,3)
+
 // interface Iitem {
 //   text: string
 // }
@@ -20,3 +29,8 @@
 // import AddItem, {
 //   IItem,
 // } from './src/components/AddItem'; /* import AddItem and interface*/
+
+//usestate
+// const Header = (props: Iitem) => {
+//  console.log(props.text)
+//};
