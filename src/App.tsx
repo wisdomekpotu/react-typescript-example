@@ -1,11 +1,10 @@
 import { FC, useEffect, useState } from 'react';
 import { Card, Grid, Text, Link } from '@nextui-org/react';
 import './App.css';
-import axios from './services/api';
 import { IUser } from './interfaces/user.interface';
 
 const App: FC = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<IUser | null>(null);
   const [products, setProducts] = useState(null);
 
   useEffect(() => {
