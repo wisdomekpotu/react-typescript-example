@@ -1,5 +1,11 @@
+import react from 'react';
+
+//const func = (url: string): promise<IUser>  =>{
+// return ([name, email])
+// }
+
 // const add = (a:number, b:number):void =>{
-// returns nothing
+// returns nothing (used on event listeners )
 // }
 
 // const add = (a:number, b:number):number =>{
@@ -24,7 +30,9 @@
 // };
 
 //declaring component 1
-// const Header: FC<Props> = ({ title }) => {};
+// const Header: FC<IProps> = ({ title }) => {
+// const [err, setErr] = useState<number | null>(0)
+//};
 
 // import AddItem, {
 //   IItem,
@@ -34,3 +42,11 @@
 // const Header = (props: Iitem) => {
 //  console.log(props.text)
 //};
+
+//array
+
+// const hash: string[] | number[] = [1,2,3,4,5,6 ,7]
+
+//useref() hook
+
+//htmlevent type

@@ -1,33 +1,54 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
+import { FC, useEffect, useState } from 'react';
+import { Card, Grid, Text, Link } from '@nextui-org/react';
 import './App.css';
+import axios from './services/api';
+import { IUser } from './interfaces/user.interface';
 
-function App() {
-  const [count, setCount] = useState(0);
+const App: FC = () => {
+  const [user, setUser] = useState(null);
+  const [products, setProducts] = useState(null);
+
+  useEffect(() => {
+    //async useeffect
+  }, []);
+
   return (
-    <div className='App'>
-      <div>
-        <a href='https://vitejs.dev' target='_blank'>
-          <img src='/vite.svg' className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://reactjs.org' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
-      </div>
-      <h1>{}</h1>
-      <div className='card'>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <Card css={{ p: '$6', mw: '400px' }}>
+      <Card.Header>
+        <img
+          alt='nextui logo'
+          src='https://avatars.githubusercontent.com/u/86160567?s=200&v=4'
+          width='34px'
+          height='34px'
+        />
+        <Grid.Container css={{ pl: '$6' }}>
+          <Grid xs={12}>
+            <Text h4 css={{ lineHeight: '$xs' }}>
+              Next UI
+            </Text>
+          </Grid>
+          <Grid xs={12}>
+            <Text css={{ color: '$accents8' }}>nextui.org</Text>
+          </Grid>
+        </Grid.Container>
+      </Card.Header>
+      <Card.Body css={{ py: '$2' }}>
+        <Text>
+          Make beautiful websites regardless of your design experience.
+        </Text>
+      </Card.Body>
+      <Card.Footer>
+        <Link
+          icon
+          color='primary'
+          target='_blank'
+          href='https://github.com/nextui-org/nextui'
+        >
+          Visit source code on GitHub.
+        </Link>
+      </Card.Footer>
+    </Card>
   );
-}
+};
 
 export default App;
